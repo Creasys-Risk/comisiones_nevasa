@@ -93,7 +93,30 @@
 - **Consideraciones adicionales**:
     - La data es enviada por correo como imágenes, por lo que tiene que ser digitada a mano en cada caso.
     - Tenemos que considerar la columna _Mensual_ de cada correo.
-    - El mapeo entre los nombres en las imágenes de cada correo y los nemotecnias de la planilla no es evidente, puede que tendremos que solicitar esta información a Nevasa al momento de operar.
+    - El mapeo entre los nombres de los fondos de inversión y sus mnemotécnicos es el siguiente:
+
+        | FONDO | NEMO | SERIE |
+        |:-----:|:----:|:-----:|
+        | VISION | CFINHVISION | A |
+        | VISION | CFINHVISION | B |
+        | AHORRO | CFINHRFL | A |
+        | AHORRO | CFINHRFL | A |
+        | AHORRO | CFINHRFL | B |
+        | AHORRO | CFINHRFL | B |
+        | AHORRO | CFINHRFL | I |
+        | AHORRO | CFINHRFL | I |
+        | DEUDA PRIVADA | CFINVSDP | R |
+        | GESTIÓN VII | CFINGVII | R |
+        | MVP | CFIPIPO-E | A |
+        | MVP | CFIPIPO-E | C |
+        | PROTECCIÓN | CFI-NVPRT | A |
+        | AXION | CFINVCHX | A |
+        | AXION | CFINVCHX | B |
+        | AXION | CFINVCHX | C |
+        | GESTIÓN VIII | CFINGVIII | B |
+        | GESTIÓN VIII | CFINGVIII | R |
+        | GESTIÓN VIII | CFINGVIII | I |
+    
     - El archivo del cubo contiene la información de todos los fondos de inversión de Nevasa, incluidos algunos que ya están cerrados, por lo que tenemos que tener cuidado de solo cargar datos a los que de hecho vienen con valores en el correo.
         - Concretamente copiamos la info del mes anterior, la pegamos en la celda siguiente con un nuevo color para distinguirla, y reemplazamos los valores según la info que nos llegue del correo.
     - Los montos llegan con IVA, por lo que debemos dividir su valor en pesos por 1.19 al incluirlos en la planilla.
