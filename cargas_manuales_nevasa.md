@@ -30,6 +30,8 @@
     - Esto se suele dar cuando los clientes no envían la información final del mes, y es responsabilidad de ellos suministrar los datos corregidos.
     - Nuestro deber es corregir la carga y re-procesar.
 
+<div class="page"/>
+
 ## Procesos por cliente
 
 ### APV
@@ -52,6 +54,8 @@
     - Al igual que con APV, el archivo que recibiremos es incremental, solo nos interesa la información del mes anterior a la fecha de proceso.
     - El mes de la data viene especificado en la columna H, "_PERIODO_".
 
+<div class="page"/>
+
 ### Insigneo
 
 - **Archivo de entrada**: COMISIONES_CONSOLIDADO.xlsx
@@ -66,6 +70,8 @@
         - Esta es una convención antigua que ya no se utiliza, por lo que el nombre a ser asignado no importa, solo tenemos que asegurarnos que sea único.
         - Recomiendan usar una mezcla entre el nombre y los apellidos del cliente.
 
+<div class="page"/>
+
 ### CFI
 
 - **Archivo de entrada**: Cierre Mensual CFI - Edición - copia.xlsx
@@ -77,6 +83,8 @@
         - Comenzamos pegando las columnas copiadas en la hoja _Consolidado2_, en el siguiente orden: _Nemo_ - _Monto Facturado_ - _Contraparte_.
         - Luego extraemos datos del mes de custodia (el mes anterior al de los datos) mediante la ejecución de una query en su SQL Server, la cual esta especificado en el Jupyter Notebook que nos harán llegar, especificando en el campo `cod_per` de la clausula `where` el año y el mes a procesar. Pegamos la tabla con los resultados de esta query en la pestaña _custodia_.
     - Una vez guardado el Excel modificado debemos ejecutar el script de Python que se encuentra dentro del Jupyter Notebook que nos proveerán, el cual termina generando un nuevo Excel de salida, **CargaFigCAST0225.xlsx**, el que contiene la información que de hecho debe ser cargada al cubo, dentro de la hoja _Carga_ de la planilla de colocaciones.
+
+<div class="page"/>
 
 ### Fondos de Inversión
 
