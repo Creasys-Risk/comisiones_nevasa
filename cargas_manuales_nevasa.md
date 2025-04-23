@@ -16,11 +16,11 @@
 
 | Nombre del proceso | Archivo de entrada | Planilla de destino | Requiere procesamiento adicional? |
 |:------------------:|:------------------:|:-------------------:|:---------------------------------:|
-| [APV](#apv) | Carga_APV.xlsx | cubo/Apv/Carga_APV.xlsx | [ ] |
-| [Fondos Mutuos](#fondos-mutuos) | Carga_RemuFinal_FFMM.xlsx | cubo/Rem_FM/Carga_RemuFinal_FFMM.xlsx | [ ] |
-| [Insigneo](#insigneo) | COMISIONES_CONSOLIDADO.xlsx | cubo/Internacional/Patrimonios.xlsx | [x] |
-| [CFI](#cfi) | Cierre Mensual CFI - Edición - copia.xlsx | cubo/Otros_Ingresos/Colocaciones.xlsx | [x] |
-| [Fondos de Inversión](#fondos-de-inversión) | Correo _Remuneración Ahorro_  | cubo/Rem_FIP/Rem_FIP.xlsx | [x] |
+| [APV](#apv) | Carga_APV.xlsx | cubo/Apv/Carga_APV.xlsx | NO |
+| [Fondos Mutuos](#fondos-mutuos) | Carga_RemuFinal_FFMM.xlsx | cubo/Rem_FM/Carga_RemuFinal_FFMM.xlsx | NO |
+| [Insigneo](#insigneo) | COMISIONES_CONSOLIDADO.xlsx | cubo/Internacional/Patrimonios.xlsx | SI |
+| [CFI](#cfi) | Cierre Mensual CFI - Edición - copia.xlsx | cubo/Otros_Ingresos/Colocaciones.xlsx | SI |
+| [Fondos de Inversión](#fondos-de-inversión) | Correo _Remuneración Ahorro_  | cubo/Rem_FIP/Rem_FIP.xlsx | SI |
 
 </center>
 
