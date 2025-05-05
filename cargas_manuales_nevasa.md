@@ -80,7 +80,7 @@
     - Los resultados se terminan colocando en el modulo de colocaciones, el cual acepta cualquier tipo de ingreso, esto debido a que CFI entro después y no se le hizo un desarrollo propio.
     - Del Excel de entrada nos interesa la hoja _Consolidado_, y de aquí solo tenemos que copiar las columnas _Contraparte_ (B), _Nemo_ (D) y la ultima columna de la hoja, cuyo nombre sigue la convención _Facturado en {mes} {año} Custodia de {mes-1}_.
     - Estos datos deben ser procesados aparte, para lo cual hacemos una copia del Excel y creamos dos pestañas nuevas dentro del mismo, _Consolidado2_ y _custodia_.
-        - Comenzamos pegando las columnas copiadas en la hoja _Consolidado2_, en el siguiente orden: _Nemo_ - _Monto Facturado_ - _Contraparte_.
+        - Comenzamos pegando las columnas copiadas en la hoja _Consolidado2_, en el siguiente orden: _Nemo_ - _Fact_ - _emisor_.
         - Luego extraemos datos del mes de custodia (el mes anterior al de los datos) mediante la ejecución de una query en su SQL Server, la cual esta especificado en el Jupyter Notebook que nos harán llegar, especificando en el campo `cod_per` de la clausula `where` el año y el mes a procesar. Pegamos la tabla con los resultados de esta query en la pestaña _custodia_.
     - Una vez guardado el Excel modificado debemos ejecutar el script de Python que se encuentra dentro del Jupyter Notebook que nos proveerán, el cual termina generando un nuevo Excel de salida, **CargaFigCAST0225.xlsx**, el que contiene la información que de hecho debe ser cargada al cubo, dentro de la hoja _Carga_ de la planilla de colocaciones.
 
