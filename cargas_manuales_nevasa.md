@@ -66,6 +66,7 @@
     - Es necesario procesar estos datos mediante un Excel aparte, **cierre mes-año insigneo.xlxs**, pegando los datos en la hoja _Transacciones Blotter_, y recuperando los resultados de las columnas en celeste, desde la AC hasta la AR.
         - Esta planilla de procesamiento incluye una hoja de mapeo, **agente**, donde se deben especificar los agentes por su nombre, su código interno de Insigneo (el cual se especifica entre paréntesis al lado de su nombre en la columna G, "_Rep Name_") y su código CMR, el cual va a ser proporcionado por Sebastián Chamorro.
         - Se puede detectar cuando un agente no esta dado de alta mirando la columna AC, la cual tendrá un valor nulo (_#N/D_) en caso de no encontrarlo en la hoja de mapeo.
+        - Al finalizar el procesamiento, es necesario modificar a mano la fecha de carga en la columna AO, para que coincida con la del fin de mes en proceso.
     - La planilla de destino utiliza un _short name_ para cada cliente en la columna Q, el cual, en caso de que aparezca un cliente nuevo, tiene que ser mapeado a mano en la hoja _Hoja2_.
         - Esta es una convención antigua que ya no se utiliza, por lo que el nombre a ser asignado no importa, solo tenemos que asegurarnos que sea único.
         - Recomiendan usar una mezcla entre el nombre y los apellidos del cliente.
@@ -121,5 +122,6 @@
         - Concretamente copiamos la info del mes anterior, la pegamos en la celda siguiente con un nuevo color para distinguirla, y reemplazamos los valores según la info que nos llegue del correo.
     - Los montos llegan con IVA, por lo que debemos dividir su valor en pesos por 1.19 al incluirlos en la planilla.
     - En el caso de los montos en dolares tenemos que transformarlos a pesos considerando el dolar observado al primer día hábil del mes siguiente.
-    - Hay dos fondos MBP, los cuales tienen una regla propia de calculo, por lo cual no se tocan directamente en el listado, en cambio se debe modificar el valor de la columna G con el monto que se recibe, y esto automáticamente modificará el monto de estos fondos.
+    - Hay dos fondos MVP, los cuales tienen una regla propia de calculo, por lo cual no se tocan directamente en el listado, en cambio se debe modificar el valor de la columna G con el monto que se recibe, y esto automáticamente modificará el monto de estos fondos.
         - Nos dejaron estos campos en rojo en la hoja para que tengamos ojo con esto.
+        - En concreto la regla de calculo es que solo se les debe considerar el 39.44% de sus valores.
